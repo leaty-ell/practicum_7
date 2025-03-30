@@ -1,7 +1,12 @@
-x = int(input('Введите объем: '))
-a = 1
-d = []
-while a**3<=x:
-    d.append(a**3)
-    a+=1
-print(' '.join(map(str, d)))
+N = int(input())
+volumes = []
+edge = 1
+
+while True:
+    volume = edge ** 3
+    if volume > N:
+        break
+    volumes.append(volume)
+    edge += 1
+
+print(' '.join(map(str, volumes)))
